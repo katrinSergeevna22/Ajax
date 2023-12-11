@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO App</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>TODO App</h1>
+        <button id="add-post-btn">Add Post</button>
+        <div class="theme-switcher">
+            <label for="theme-switch">Switch Theme:</label>
+            <input type="checkbox" id="theme-switch" />
+        </div>
+    </header>
+    <main>
+        <div id="loader"></div>
+        <ul id="posts-list"></ul>
+    </main>
+
+    <!-- Modal for adding/editing posts -->
+    <div id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <form id="post-form">
+                <label for="post-title">Title:</label>
+                <input type="text" id="post-title" required />
+                <label for="post-body">Body:</label>
+                <textarea id="post-body" required></textarea>
+                <label for="post-user">User ID:</label>
+                <input type="number" id="post-user" min="1" max="10" required />
+                <div class="modal-actions">
+                    <button type="submit" id="submit-btn">Submit</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
